@@ -408,5 +408,77 @@ h2.number span{
 table{
     width: 100%;
     border-collapse: collapse;
+    margin-top: 30px;
+    text-align: center; 
 }
 
+thead{
+    background-color: #5070E0;
+}
+
+
+th h2{
+    color: white;
+    font-size: large;
+    font-weight: 500;
+}
+th:not(:last-child) h2{
+    border-right: 1px solid;
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tbody tr{
+    width: 100%;
+}
+
+th,td{
+    text-align: center; 
+    vertical-align: middle;
+    padding: 10px;
+}
+
+th{
+    padding: 20px;
+}
+
+
+tbody td h2{
+    font-size: large;
+    color: #303030;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+tbody tr:nth-child(odd) {
+background-color: white;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+
+.statut{
+    height: 40px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.verified{
+    background-color: #32ff7e;
+}
+
+.interdit{
+    background-color: #FF4B4E;
+}
