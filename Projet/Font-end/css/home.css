@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body{
+    display: flex;
+    background-color: #d3dfff;
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-part{
+    width: 500px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.dashboard{
+    height: 800px;
+    background-color: #2D53DA;
+    width: 350px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+}
+
+.dashboard .title{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard .title h2{
+    color: white;
+    font-weight: normal;
+    font-size: x-large;
+}
+
+.dashboard ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: start;
+    align-items: start;
+    height: 100%;
+    
+}
+
+.dashboard ul .subtitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.dashboard ul .subtitle h2{
+    color: white;
+    font-weight: lighter;
+    font-size: 13px;
+    margin-left: -80px;
+}
+
+.dashboard ul li{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.dashboard ul li a{
+    text-decoration: none;
+  color: inherit;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  
+}
+
+.dashboard ul li a h2{
+    color: white;
+}
+
+.dashboard ul .active{
+    background-color: white;
+    width:200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.dashboard ul .active a{
+    display: flex;
+    align-items: center;
+}
+
+.dashboard ul .active a div{
+    margin-left: 15px;
+    background-color: #2D53DA;
+    border-radius:3px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dashboard ul .active a .point{
+    background-color: #B2C3FF;
+    border-radius:3px;
+    width: 5px;
+    height: 30px;
+    display: flex;
+}   
+
+.dashboard ul .active a h2{
+    color: #3B3D75;
+    font-size: large;
+}
+
+
+/**/
+.dashboard ul .non-active{
+    width:200px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    transition: 300ms;
+}
+
+.dashboard ul .non-active a div{
+    margin-left: 15px;
+    border-radius:3px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+.dashboard ul .non-active a h2{
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    margin-left: 30px;   
+}
+
+.dashboard ul .non-active a{
+    display: flex;
+    align-items: center;
+}
+
+.dashboard ul .non-active:hover{
+    background-color: #dddddd3b;
+}
+
+.dashboard ul li a img{
+    height: 15px;
+    width: 15px;
+    filter: brightness(0)invert(1);
+}
+
+
+.right-part{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    
+    
+}
+
+.right-part .main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 35px;
+    width: 90%;
+    height: 100%;
+}
+
+.right-part .main .greetings{
+
+}
+
+.right-part .main .greetings h2{
+    font-size: large;
+    font-weight: 400;
+    color: #303030;
+}
+
+.right-part .main .greetings h2 span{
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+/* Search */
+
+.search{
+    width: 100%;
+    height: 80px;
+    margin-top: 30px;
+}
+
+.search-container{
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+.search-container form{
+    display: flex;
+    width: 100%;
+}
+
+.search-container form .search-input{
+    display: flex;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    
+}
+
+.search-container form .search-input input{
+background-color: transparent;
+border: none;
+outline: none;
+width: 100%;
+margin-left: 20px;
+font-size: large;
+}
+
+.search-container form .search-input img{
+    height: 20px;
+    width: 20px;
+    margin-left: 15px;
+    opacity: 0.6;
+}
+
+.search-container form .submit-button{
+ height: 50px;
+ width: 50px;
+}
+
+.search-container form .submit-button button{
+    border: none;
+    background-color: transparent;
+    background-color:#5070E0;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+
+.search-container form .submit-button button:hover{
+    background-color:#2853ee;
+
+}
+
+.search-container form .submit-button button img{
+    height: 30px;
+    width: 30px;
+    filter: brightness(0)invert(1);
+}
+
+/*Statistiques*/
+.stats{
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.stats h2{
+    font-weight: 500;
+    color: #303030;
+    font-size: large;
+}
+
+.stats-squares{
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats-square{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 20px;
+}
+
+.stats-square .title{
+    display: flex;
+    align-items: center;
+}
+.square{
+    width: 10px;
+    height: 10px;
+    background-color: #32ff7e;
+    margin-left: 20px;
+}
+
+.stats-square .title h2{
+    margin-left: 30px;
+    font-weight: 800;
+}
+
+h2.number{
+    font-size: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+h2.number span{
+    font-size: large;
+    font-weight: 800;
+}
+
+/**/
+
+.chart{
+    margin-top: 20px;
+}
+.chart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.chart-text {
+    position: relative;
+    top: 20px;
+    left: 10px;
+    font-size: 14px;
+    color: #32ff7e;
+}
+
+
+
+/*Historique*/
+
+.history{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+}
+
+
+.history .title{
+    height: 30px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.history .title h2{
+    font-size: larger;
+    font-weight: 500;
+}
+
+.history .title .button-down{
+    background-color: #5070E0;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:5px ;
+}
+
+.history .title .button-down img{
+    height: 30px;
+    width: 30px;
+    filter: brightness(0)invert(1);
+}
+
+
+
+/*Table*/
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
