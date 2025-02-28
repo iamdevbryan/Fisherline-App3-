@@ -6,6 +6,7 @@ from .views import MessageView, AlertConfirm
 urlpatterns = [
     path('', views.index, name='index'),
     path('messages/', MessageView.as_view(), name='message'),
-    path('alert/', AlertConfirm.as_view(), name="alert")
-
+    path('alert/', AlertConfirm.as_view(), name="alert"),
+    path('home/', views.accueil, name='home'),
+    path('database', views.database, name='Database')
 ]

@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishin'</title>
+    <link rel="stylesheet" href="{% static 'css/database.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fade-in.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <div class="left-part">
+            <div class="dashboard">
+                <div class="title">
+                    <h2>Fishin'</h2>
+                </div>
+
+
+
+                <ul>
+                    <div class="subtitle"><h2>Tableau de bord</h2></div> 
+                    <li class="non-active"><a href="{% url 'home' %}"> <div>
+                        <img src="{% static 'assets/stats.png' %}">
+                    </div> <h2>Aperçu</h2>  <div class="point"></div></a></li>
+
+                    <li class="non-active"><a href="#"> <div>
+                        <img src="{% static 'assets/history.png' %}" alt="">
+                    </div> <h2>Historique</h2>  <div class="point"></div></a></li>
+
+                    <li class="active"><a href="{% url 'database' %}"> <div>
+                        <img src="{% static 'assets/database.png' %}" alt="">
+                    </div> <h2 style="margin-left: 30px;">Base de données</h2>  <div class="point"></div></a></li>
+
+                    <li class="non-active" style="margin-top: 300px;"><a href="#"> <div>
+                        <img src="{% static 'assets/logout.png' %}" alt="">
+                    </div> <h2>Déconnexion</h2>  <div class="point"></div></a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-part">
+
+            <div class="main">
+                <div class="greetings">
+                    <h2>Bonjour,<br><span>Administrateur</span></h2>
+                </div>
+                <div class="search">
+                    <div class="search-container">
+                        <form action="" method="post">
+                            <div class="search-input">
+                                <img src="{% static 'assets/search.png' %}" alt="">
+                                <input type="search" name="" id="" placeholder="Recherchez un matricule">
+                            </div>
+                            
+                            <div class="submit-button">
+                                <button type="submit">
+                                    <img src="{% static 'assets/search.png' %}" alt="">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Pics container -->
+                     <div>
+                        <div class="pics-container">
+
+                            {% for Nav in all_Nav %}
+                            <div class="pic1-container">
+                                <img src="{{ Nav.image.url }}" alt="">
+                                <h2> {{ Nav.id }}</h2>
+                                <h4>{{ Nav.entreprise }}</h4>
+                            </div>
+
+                            {% endfor %}
+                        
+                        
+                    </div>
+                     </div>
+                    
+
+                <!-- Supprimer à partir de là pour écrire du nouveau code -->
+
+
+                <!-- Supprimer jusqu'ici  -->
+
+            </div>
+           
+
+        </div>
+        
+    </main>
+
+    <div class="gradient"> 
+    </div>
+
+   
+
+</body>
+</html>
