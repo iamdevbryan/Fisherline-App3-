@@ -1,0 +1,288 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fishin'</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/alert.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fade-in.css' %}">
+    <link rel="stylesheet" href="{% static 'css/scrollbar.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <div class="left-part">
+            <div class="dashboard">
+                <div class="title">
+                    <h2>Fishin'</h2>
+                </div>
+
+
+
+                <ul>
+                    <div class="subtitle"><h2>Tableau de bord</h2></div> 
+                    <li class="active"><a href="#"> <div>
+                        <img src="{% static 'assets/stats.png' %}" alt="">
+                    </div> <h2>Aperçu</h2>  <div class="point"></div></a></li>
+
+                    <li class="non-active"><a href="#"> <div>
+                        <img src="{% static 'assets/history.png' %}" alt="">
+                    </div> <h2>Historique</h2>  <div class="point"></div></a></li>
+
+                    <li class="non-active"><a href="{% url 'database' %}"> <div>
+                        <img src="{% static 'assets/database.png' %}" alt="">
+                    </div> <h2>Base de données</h2>  <div class="point"></div></a></li>
+
+                    <li class="non-active" style="margin-top: 300px;"><a href="#"> <div>
+                        <img src="{% static 'assets/logout.png' %}" alt="">
+                    </div> <h2>Déconnexion</h2>  <div class="point"></div></a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-part">
+
+            <div class="main">
+
+                <!-- Supprimer à partir de là pour écrire du nouveau code -->
+
+                <div class="greetings">
+                    <h2>Bonjour,<br><span>Administrateur</span></h2>
+                </div>
+
+                <div class="search">
+                    <div class="search-container">
+                        <form action="" method="post">
+                            <div class="search-input">
+                                <img src="{% static 'assets/search.png' %}" alt="">
+                                <input type="search" name="" id="" placeholder="Recherchez un matricule, une date...">
+                            </div>
+                            
+                            <div class="submit-button">
+                                <button type="submit">
+                                    <img src="{% static 'assets/search.png' %}" alt="">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+
+
+                <div class="stats">
+                    <h2>Statistiques</h2>
+                    
+                    <div class="stats-squares">
+
+                    
+                    <div class="stats-square">
+                        <div class="title">
+                            <div class="square"></div> <h2>Bâteaux identifiés</h2>
+                        </div>
+
+                        <h2 class="number">103 <span>Bâteaux</span></h2>
+      <div class="chart">  <div class="chart-text">+10% cette semaine</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" preserveAspectRatio="none">
+            <path d="M0 30 Q30 10, 50 30 T100 10" fill="none" stroke="#32ff7e" stroke-width="1.5"/>
+        </svg>
+    </div>
+                    </div>
+
+                    <div class="stats-square">
+                        <div class="title">
+                            <div class="square"></div> <h2>Bâteaux identifiés</h2>
+                        </div>
+
+                        <h2 class="number">103 <span>Bâteaux</span></h2>
+      <div class="chart">  <div class="chart-text">+10% cette semaine</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" preserveAspectRatio="none">
+            <path d="M0 30 Q30 10, 50 30 T100 10" fill="none" stroke="#32ff7e" stroke-width="1.5"/>
+        </svg>
+    </div>
+                    </div>
+
+                    <div class="stats-square">
+                        <div class="title">
+                            <div class="square"></div> <h2>Bâteaux identifiés</h2>
+                        </div>
+
+                        <h2 class="number">103 <span>Bâteaux</span></h2>
+      <div class="chart">  <div class="chart-text">+10% cette semaine</div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 50" preserveAspectRatio="none">
+            <path d="M0 30 Q30 10, 50 30 T100 10" fill="none" stroke="#32ff7e" stroke-width="1.5"/>
+        </svg>
+    </div>
+                    </div>
+
+                    </div>
+                </div>
+
+                <div class="history">
+
+                    <div class="title"> 
+                        <h2>Historique</h2>
+
+                        <div class="button-down"> <img src="{% static 'assets/down.png' %}" alt=""></div>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                            <th> <h2>Statut</h2></th>
+                            <th> <h2>Id</h2></th>
+                            <th><h2>Date de detect.</h2></th>
+                            <th><h2>Instant de détect.</h2></th>
+                        </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr>
+                            <td>
+                                <div class="statut verified"> <h2>Vefifié</h2> </div>
+                            </td>
+
+                            <td>
+                               <h2>00215</h2> 
+                            </td>
+
+                            <td>
+                               <h2> 12 décembre</h2>
+                            </td>
+
+                            <td>
+                               <h2>13H 20min 46sec</h2> 
+                            </td>
+                        
+                        </tr>
+
+
+                        <tr>
+                            <td>
+                                <div class="statut interdit"> <h2>Vefifié</h2> </div>
+                            </td>
+
+                            <td>
+                               <h2>00215</h2> 
+                            </td>
+
+                            <td>
+                               <h2> 12 décembre</h2>
+                            </td>
+
+                            <td>
+                               <h2>13H 20min 46sec</h2> 
+                            </td>
+                        
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="statut verified"> <h2>Vefifié</h2> </div>
+                            </td>
+
+                            <td>
+                               <h2>00215</h2> 
+                            </td>
+
+                            <td>
+                               <h2> 12 décembre</h2>
+                            </td>
+
+                            <td>
+                               <h2>13H 20min 46sec</h2> 
+                            </td>
+                        
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="statut verified"> <h2>Vefifié</h2> </div>
+                            </td>
+
+                            <td>
+                               <h2>00215</h2> 
+                            </td>
+
+                            <td>
+                               <h2> 12 décembre</h2>
+                            </td>
+
+                            <td>
+                               <h2>13H 20min 46sec</h2> 
+                            </td>
+                        
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Supprimer jusqu'ici  -->
+
+            </div>
+           
+
+        </div>
+        
+    </main>
+
+    <div class="gradient"> 
+    </div>
+
+    <div class="alert-container">
+        <div class="alert">
+            <div class="title"> <h2>NOUVEAU NAVIRE DÉTECTÉ</h2> <img src="{% static 'assets/warning.webp' %}" alt=""> </div>
+            
+            <div class="infos">
+                <div class="statut verified" style="width:180px; height: 50px;"> <h2>Vefifié</h2> </div>
+            
+                <div class="id">
+                    <div class="title"><h2>ID</h2></div>
+                    <div class="id-number"><h2>002134</h2></div>
+                </div>
+
+            </div>
+
+            <div class="localisation">
+                <h2>Localisation : Zone 31</h2>
+            </div>
+
+            <a href="#">voir le navire</a>
+
+        </div>
+
+        <div class="close">
+            <img src="{% static 'assets/cross.png' %}" alt="">
+        </div>
+    </div>
+
+    <div class="alert-false-container">
+        <div class="alert">
+            <div class="title"> <h2>NAVIRE INTRU DÉTECTÉ</h2> <img src="{% static 'assets/warning.webp' %}" alt=""> </div>
+            
+            <div class="infos">
+                <div class="statut interdit" style="width:180px; height: 50px;"> <h2>Interdit</h2> </div>
+            
+
+            </div>
+
+            <div class="localisation">
+                <h2>Localisation : Zone 31</h2>
+            </div>
+
+            <a href="#">Passer à la vue caméra</a>
+
+        </div>
+
+        <div class="close-false">
+            <img src="{% static 'assets/cross.png' %}" alt="">
+        </div>
+    </div>
+
+        <script src="{% static 'js/alert.js' %}"></script>
+</body>
+</html>
